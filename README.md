@@ -1,3 +1,8 @@
+# Фортов Егор Кириллович, БПИ214
+## ДЗ №3 "Оптимизация газа"
+### Решено: все (комментарии по улучшению в газе см. в коде новых тестов новых контрактов)
+
+
 # Gas optimization quizz
 
 Homework for students on the topic of gas optimization.
