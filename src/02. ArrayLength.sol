@@ -10,3 +10,11 @@ contract ArrayLength {
         }
     }
 }
+
+contract ArrayLengthOptimized {
+  uint256[] public myArray = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+  function callFor() public view returns (uint256) {
+    return myArray.length;
+  }
+}

@@ -28,3 +28,20 @@ contract Loops {
         } while (i < 10);
     }
 }
+
+contract LoopsOptimized {
+  function loopFor() public pure returns (uint256) {
+   uint256 n = 20;
+   return n * (n -1) /2;
+  }
+
+  function loopWhile() public pure returns (uint256) {
+   uint256 n = 10;
+   return n * (n -1) /2;
+  }
+
+  function loopDoWhile() public pure returns (uint256) {
+   uint256 n = 10;
+   return n * (n -1) /2;
+  }
+}

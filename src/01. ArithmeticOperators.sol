@@ -9,6 +9,15 @@ contract Addition {
     }
 }
 
+/////////////////////////////////////////////////////////
+contract AdditionOptimized {
+function addition(uint256 value) public pure returns (uint256) {
+    return value + 1;
+  }
+}
+////////////////////////////////////////////////////////
+
+
 contract Subtraction {
     uint256 number = 100;
 
@@ -16,6 +25,14 @@ contract Subtraction {
         number -= value;
     }
 }
+
+////////////////////////////////////////////////////////
+contract SubtractionOptimized {
+  function subtraction(uint256 value) public pure returns (uint256) {
+    return 100 - value;
+  }
+}
+////////////////////////////////////////////////////////
 
 contract Division {
     function divisionBy2(uint256 number) public pure returns (uint256) {
@@ -26,3 +43,17 @@ contract Division {
         return number / 128;
     }
 }
+
+////////////////////////////////////////////////////////
+contract DivisionOptimized {
+
+    function divisionBy2(uint256 number) public pure returns (uint256) {
+        return number >> 1;  // binary operations are faster in whole
+    }
+
+
+    function divisionBy128(uint256 number) public pure returns (uint256) {
+        return number >> 1; // binary operations are faster in whole
+    }
+}
+////////////////////////////////////////////////////////

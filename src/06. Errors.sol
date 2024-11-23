@@ -17,3 +17,22 @@ contract Errors {
 
     function call() public view onlyOwner {}
 }
+
+contract ErrorsOptimized {
+  address owner;
+
+  error Unauthorized(address caller);
+
+  modifier onlyOwner() {
+    if (owner != msg.sender) {
+      revert Unauthorized(msg.sender);
+    }
+    _;
+  }
+
+  constructor() {
+    owner = msg.sender;
+  }
+
+  function call() public view onlyOwner {}
+}

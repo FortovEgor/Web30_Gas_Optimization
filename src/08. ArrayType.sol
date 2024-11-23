@@ -10,3 +10,15 @@ contract ArrayType {
         }
     }
 }
+
+
+contract ArrayTypeOptimized {
+    uint256[] array;
+
+    function initArray() public {
+        array = new uint256[](200);  // pre-allocation of the array
+        for (uint256 i = 0; i < 200; i++) {
+            array[i] = i;
+        }
+    }
+}

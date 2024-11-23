@@ -33,3 +33,33 @@ contract ArithmeticOperatorsTest is Test {
         division.divisionBy128(1024);
     }
 }
+
+////////////////////////////////////////////////////////
+contract ArithmeticOperatorsOptimizedTest is Test {
+    AdditionOptimized addition;
+    SubtractionOptimized subtraction;
+    DivisionOptimized division;
+
+    function setUp() public {
+        addition = new AdditionOptimized();
+        subtraction = new SubtractionOptimized();
+        division = new DivisionOptimized();
+    }
+
+    function test_Addition() public {  // x2 optimization
+        addition.addition(10);
+    }
+
+    function test_Subtraction() public {  // x2 optimization
+        subtraction.subtraction(10);
+    }
+
+    function test_DivisionBy2() public view {  // tiny optimization
+        division.divisionBy2(1024);
+    }
+
+    function test_DivisionBy128() public view {  // tiny optimization
+        division.divisionBy128(1024);
+    }
+}
+////////////////////////////////////////////////////////
