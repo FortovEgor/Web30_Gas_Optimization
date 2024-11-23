@@ -3,6 +3,9 @@
 ### Решено: все (комментарии по улучшению в газе см. в коде новых тестов новых контрактов)
 
 
+# УСЛОВИЕ ЗАДАНИЯ:
+
+
 # Gas optimization quizz
 
 Homework for students on the topic of gas optimization.
